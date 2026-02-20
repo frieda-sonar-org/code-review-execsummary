@@ -1,0 +1,25 @@
+/* Import Design System */
+@import "./design-system.css";
+@import "./design-system-typography.css";
+@import "./styles.css";
+
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ubuntu-mono);
+}
+
+/* Force dark mode */
+html,
+body {
+  background-color: #0a0a0a !important;
+  color: #ededed !important;
+}

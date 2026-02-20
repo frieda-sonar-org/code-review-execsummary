@@ -1,0 +1,156 @@
+/**
+ * Typography Design System
+ * Based on Echoes React Design System
+ *
+ * Font Families:
+ * - Inter: Primary UI font (sans-serif)
+ * - Ubuntu Mono: Code and monospace content
+ */
+
+:root {
+  /* Font Families */
+  --echoes-font-family-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --echoes-font-family-code: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+
+  /* Font Sizes (rem values) */
+  --echoes-font-size-75: 0.75rem;    /* 12px */
+  --echoes-font-size-87: 0.875rem;   /* 14px */
+  --echoes-font-size-100: 1rem;      /* 16px */
+  --echoes-font-size-125: 1.25rem;   /* 20px */
+  --echoes-font-size-150: 1.5rem;    /* 24px */
+  --echoes-font-size-212: 2.125rem;  /* 34px */
+
+  /* Font Weights */
+  --echoes-font-weight-regular: 400;
+  --echoes-font-weight-medium: 500;
+  --echoes-font-weight-semibold: 600;
+  --echoes-font-weight-bold: 700;
+
+  /* Line Heights (rem values) */
+  --echoes-line-height-100: 1rem;       /* 16px */
+  --echoes-line-height-112: 1.125rem;   /* 18px */
+  --echoes-line-height-125: 1.25rem;    /* 20px */
+  --echoes-line-height-137: 1.375rem;   /* 22px */
+  --echoes-line-height-150: 1.5rem;     /* 24px */
+  --echoes-line-height-175: 1.75rem;    /* 28px */
+  --echoes-line-height-200: 2rem;       /* 32px */
+  --echoes-line-height-312: 3.125rem;   /* 50px */
+
+  /* Pre-composed Typography Tokens */
+
+  /* Display (34px) */
+  --echoes-typography-display-default: var(--echoes-font-weight-regular) var(--echoes-font-size-212) / var(--echoes-line-height-312) var(--echoes-font-family-sans);
+  --echoes-typography-display-bold: var(--echoes-font-weight-bold) var(--echoes-font-size-212) / var(--echoes-line-height-312) var(--echoes-font-family-sans);
+
+  /* Headings */
+  --echoes-typography-heading-xlarge: var(--echoes-font-weight-semibold) var(--echoes-font-size-150) / var(--echoes-line-height-200) var(--echoes-font-family-sans);
+  --echoes-typography-heading-large: var(--echoes-font-weight-semibold) var(--echoes-font-size-125) / var(--echoes-line-height-175) var(--echoes-font-family-sans);
+  --echoes-typography-heading-default: var(--echoes-font-weight-semibold) var(--echoes-font-size-100) / var(--echoes-line-height-150) var(--echoes-font-family-sans);
+  --echoes-typography-heading-small: var(--echoes-font-weight-semibold) var(--echoes-font-size-87) / var(--echoes-line-height-137) var(--echoes-font-family-sans);
+
+  /* Text (Body) */
+  --echoes-typography-text-default-regular: var(--echoes-font-weight-regular) var(--echoes-font-size-87) / var(--echoes-line-height-137) var(--echoes-font-family-sans);
+  --echoes-typography-text-default-medium: var(--echoes-font-weight-medium) var(--echoes-font-size-87) / var(--echoes-line-height-137) var(--echoes-font-family-sans);
+  --echoes-typography-text-default-semibold: var(--echoes-font-weight-semibold) var(--echoes-font-size-87) / var(--echoes-line-height-137) var(--echoes-font-family-sans);
+  --echoes-typography-text-default-bold: var(--echoes-font-weight-bold) var(--echoes-font-size-87) / var(--echoes-line-height-137) var(--echoes-font-family-sans);
+
+  --echoes-typography-text-small-regular: var(--echoes-font-weight-regular) var(--echoes-font-size-75) / var(--echoes-line-height-112) var(--echoes-font-family-sans);
+  --echoes-typography-text-small-medium: var(--echoes-font-weight-medium) var(--echoes-font-size-75) / var(--echoes-line-height-112) var(--echoes-font-family-sans);
+  --echoes-typography-text-small-semibold: var(--echoes-font-weight-semibold) var(--echoes-font-size-75) / var(--echoes-line-height-112) var(--echoes-font-family-sans);
+  --echoes-typography-text-small-bold: var(--echoes-font-weight-bold) var(--echoes-font-size-75) / var(--echoes-line-height-112) var(--echoes-font-family-sans);
+
+  /* Code */
+  --echoes-typography-code-default: var(--echoes-font-weight-regular) var(--echoes-font-size-87) / var(--echoes-line-height-125) var(--echoes-font-family-code);
+  --echoes-typography-code-small: var(--echoes-font-weight-regular) var(--echoes-font-size-75) / var(--echoes-line-height-100) var(--echoes-font-family-code);
+
+  /* Label */
+  --echoes-typography-label-default: var(--echoes-font-weight-semibold) var(--echoes-font-size-87) / var(--echoes-line-height-125) var(--echoes-font-family-sans);
+  --echoes-typography-label-small: var(--echoes-font-weight-semibold) var(--echoes-font-size-75) / var(--echoes-line-height-100) var(--echoes-font-family-sans);
+
+  /* Helper Text */
+  --echoes-typography-helper-text: var(--echoes-font-weight-regular) var(--echoes-font-size-75) / var(--echoes-line-height-100) var(--echoes-font-family-sans);
+}
+
+/* Utility Classes for Easy Application */
+
+/* Display */
+.typography-display-default {
+  font: var(--echoes-typography-display-default);
+}
+
+.typography-display-bold {
+  font: var(--echoes-typography-display-bold);
+}
+
+/* Headings */
+.typography-heading-xlarge {
+  font: var(--echoes-typography-heading-xlarge);
+}
+
+.typography-heading-large {
+  font: var(--echoes-typography-heading-large);
+}
+
+.typography-heading-default {
+  font: var(--echoes-typography-heading-default);
+}
+
+.typography-heading-small {
+  font: var(--echoes-typography-heading-small);
+}
+
+/* Text (Body) */
+.typography-text-default-regular {
+  font: var(--echoes-typography-text-default-regular);
+}
+
+.typography-text-default-medium {
+  font: var(--echoes-typography-text-default-medium);
+}
+
+.typography-text-default-semibold {
+  font: var(--echoes-typography-text-default-semibold);
+}
+
+.typography-text-default-bold {
+  font: var(--echoes-typography-text-default-bold);
+}
+
+.typography-text-small-regular {
+  font: var(--echoes-typography-text-small-regular);
+}
+
+.typography-text-small-medium {
+  font: var(--echoes-typography-text-small-medium);
+}
+
+.typography-text-small-semibold {
+  font: var(--echoes-typography-text-small-semibold);
+}
+
+.typography-text-small-bold {
+  font: var(--echoes-typography-text-small-bold);
+}
+
+/* Code */
+.typography-code-default {
+  font: var(--echoes-typography-code-default);
+}
+
+.typography-code-small {
+  font: var(--echoes-typography-code-small);
+}
+
+/* Label */
+.typography-label-default {
+  font: var(--echoes-typography-label-default);
+}
+
+.typography-label-small {
+  font: var(--echoes-typography-label-small);
+}
+
+/* Helper Text */
+.typography-helper-text {
+  font: var(--echoes-typography-helper-text);
+}

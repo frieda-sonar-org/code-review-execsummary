@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull Requests - SonarQube Cloud</title>
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="top-nav-left">
+            <button class="menu-toggle">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="14" fill="#FF6B35"/>
+                    <path d="M16 8v16M8 16h16" stroke="white" stroke-width="2"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-name">SonarQube</span>
+                    <span class="logo-subtitle">cloud</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="top-nav-center">
+            <a href="#" class="nav-link">My Projects</a>
+            <a href="#" class="nav-link">My Issues</a>
+            <a href="#" class="nav-link nav-dropdown">
+                My Portfolios
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                    <path d="M6 8L2 4h8L6 8z"/>
+                </svg>
+            </a>
+            <a href="#" class="nav-link">Explore</a>
+        </nav>
+
+        <div class="top-nav-right">
+            <button class="btn-upgrade">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6l2-6z"/>
+                </svg>
+                Upgrade
+            </button>
+            <button class="icon-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
+                    <path d="M14 14l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn notification-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a6 6 0 00-6 6v3l-2 2v1h16v-1l-2-2V8a6 6 0 00-6-6zM8 16a2 2 0 104 0"/>
+                </svg>
+                <span class="notification-badge">1</span>
+            </button>
+            <button class="icon-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <circle cx="10" cy="10" r="8"/>
+                </svg>
+            </button>
+            <button class="icon-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <rect x="3" y="3" width="6" height="6" fill="currentColor"/>
+                    <rect x="11" y="3" width="6" height="6" fill="currentColor"/>
+                    <rect x="3" y="11" width="6" height="6" fill="currentColor"/>
+                    <rect x="11" y="11" width="6" height="6" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="icon-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <rect x="2" y="2" width="7" height="7" rx="1"/>
+                    <rect x="11" y="2" width="7" height="7" rx="1"/>
+                    <rect x="2" y="11" width="7" height="7" rx="1"/>
+                    <rect x="11" y="11" width="7" height="7" rx="1"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="project-selector">
+                <div class="project-icon">A</div>
+                <div class="project-info">
+                    <div class="project-name">asast-scanner-pipe...</div>
+                    <div class="project-label">Project</div>
+                </div>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                    <path d="M6 8L2 4h8L6 8z"/>
+                </svg>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="12" height="12" rx="1"/>
+                    </svg>
+                    Overview
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="5" height="5"/>
+                        <rect x="9" y="2" width="5" height="5"/>
+                        <rect x="2" y="9" width="5" height="5"/>
+                        <rect x="9" y="9" width="5" height="5"/>
+                    </svg>
+                    Dashboards
+                    <span class="badge-new">New</span>
+                    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+                        <path d="M4 2l4 4-4 4V2z"/>
+                    </svg>
+                </a>
+
+                <div class="sidebar-section">Analysis</div>
+
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="10" width="3" height="4"/>
+                        <rect x="6" y="6" width="3" height="8"/>
+                        <rect x="10" y="2" width="3" height="12"/>
+                    </svg>
+                    Summary
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 2h12v12H2V2zm2 2v8h8V4H4z"/>
+                    </svg>
+                    Issues
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <circle cx="8" cy="8" r="6"/>
+                    </svg>
+                    Security Hotspots
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 2L6 6H2l4 4-2 6 4-3 4 3-2-6 4-4h-4l-2-4z"/>
+                    </svg>
+                    Dependency Risks
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 2h12l-6 12L2 2z"/>
+                    </svg>
+                    Security Reports
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <rect x="2" y="2" width="4" height="4"/>
+                        <rect x="7" y="2" width="4" height="4"/>
+                        <rect x="12" y="2" width="2" height="4"/>
+                        <rect x="2" y="7" width="4" height="7"/>
+                        <rect x="7" y="7" width="4" height="7"/>
+                        <rect x="12" y="7" width="2" height="7"/>
+                    </svg>
+                    Architecture
+                    <span class="badge-beta">Beta</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 6h12v2H2V6zm0 4h12v2H2v-2z"/>
+                    </svg>
+                    Measures
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 2h12v12H2V2zm2 2v8h8V4H4z"/>
+                        <path d="M6 6h4v4H6V6z"/>
+                    </svg>
+                    Code
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <circle cx="5" cy="5" r="2"/>
+                        <circle cx="11" cy="5" r="2"/>
+                        <circle cx="8" cy="11" r="2"/>
+                        <path d="M5 7l3 4m3-4l-3 4"/>
+                    </svg>
+                    Dependencies
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 2v12M2 8h12"/>
+                    </svg>
+                    Activity
+                </a>
+
+                <div class="sidebar-section">Information</div>
+
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 2L2 6v4l6 4 6-4V6l-6-4z"/>
+                    </svg>
+                    Agent activity
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <circle cx="8" cy="8" r="6"/>
+                        <path d="M8 5v4M8 11h.01" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Project Information
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                    </svg>
+                    Pull Requests
+                    <span class="count-badge">10</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M2 2h12v2H2V2zm0 4h8v2H2V6zm0 4h10v2H2v-2z"/>
+                    </svg>
+                    Branches
+                    <span class="count-badge">1</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="#" class="breadcrumb-link">SonarSource</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="#" class="breadcrumb-link">asast-scanner-pipeline</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Pull Requests</span>
+            </div>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">Pull Requests</h1>
+                <div class="warning-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 2l6 12H2L8 2z"/>
+                        <path d="M8 7v3M8 11h.01" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    Last analysis had warnings
+                </div>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-bar">
+                <div class="pr-count">10 Pull Requests</div>
+                <div class="search-input-wrapper">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M11 11l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search for Pull Requests...">
+                </div>
+                <button class="btn-filters">Filters</button>
+            </div>
+
+            <!-- Pull Requests List -->
+            <div class="pr-list">
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">35 - SC-37654 Fix Mise</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="3" y="3" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">30 days ago</div>
+                    <div class="pr-commit">d785751e</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">34 - ASASTSCAN-223 License header of asast-scanner-pipeline should b...</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="3" y="3" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">30 days ago</div>
+                    <div class="pr-commit">ca09b179</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">33 - ASASTSCAN-220 Increase memory available during generation</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="3" y="3" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">e99ee76e</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">31 - ASASTSCAN-218 Exclude rule S6639 from generation</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="3" y="3" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">1c98ce11</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">32 - ASASTSCAN-219 Fix ASAST pipeline regarding repox access</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="3" y="3" width="10" height="10" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">9ea4f498</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">30 - ASASTSCAN-191 Update Java version of ASAST Scanner</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="2" y="2" width="5" height="5" rx="1"/>
+                            <rect x="9" y="2" width="5" height="5" rx="1"/>
+                            <rect x="2" y="9" width="5" height="5" rx="1"/>
+                            <rect x="9" y="9" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">71a0e383</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">29 - ASASTSCAN-196 Libraries.io token should be available in the pipeline ...</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="2" y="2" width="5" height="5" rx="1"/>
+                            <rect x="9" y="2" width="5" height="5" rx="1"/>
+                            <rect x="2" y="9" width="5" height="5" rx="1"/>
+                            <rect x="9" y="9" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">a869de1d</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">28 - SC-35440 scripted update of SonarSource SA to SonarSource Sàrl</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="2" y="2" width="5" height="5" rx="1"/>
+                            <rect x="9" y="2" width="5" height="5" rx="1"/>
+                            <rect x="2" y="9" width="5" height="5" rx="1"/>
+                            <rect x="9" y="9" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">e8f9a357</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">27 - ASASTSCAN-193 Add repox access token to the pipeline for the integr...</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="2" y="2" width="5" height="5" rx="1"/>
+                            <rect x="9" y="2" width="5" height="5" rx="1"/>
+                            <rect x="2" y="9" width="5" height="5" rx="1"/>
+                            <rect x="9" y="9" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">43eb1612</div>
+                </div>
+
+                <div class="pr-item">
+                    <div class="pr-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M4 2l4 4-4 4V2zM8 6l4 4-4 4V6z"/>
+                        </svg>
+                    </div>
+                    <div class="pr-title">26 - SC-35844 Add required secrets</div>
+                    <div class="pr-status">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M2 8l4 4 8-8" stroke="#4caf50" stroke-width="2" fill="none"/>
+                        </svg>
+                        Passed
+                    </div>
+                    <div class="pr-icon-small">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <rect x="2" y="2" width="5" height="5" rx="1"/>
+                            <rect x="9" y="2" width="5" height="5" rx="1"/>
+                            <rect x="2" y="9" width="5" height="5" rx="1"/>
+                            <rect x="9" y="9" width="5" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="pr-date">1 month ago</div>
+                    <div class="pr-commit">8f76eaaf</div>
+                </div>
+            </div>
+
+            <!-- Floating Action Button -->
+            <button class="fab">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.2L5 12.2l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                </svg>
+            </button>
+        </main>
+    </div>
+</body>
+</html>
